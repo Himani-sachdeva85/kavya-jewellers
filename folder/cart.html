@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Kavya Jewellers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--primary-gold);
+        }
+
+        .btn-remove {
+            background: transparent;
+            border: none;
+            color: #ff4d4d;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .summary-box {
+            background: var(--ivory);
+            padding: 30px;
+            border-radius: 10px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .checkout-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        @media (max-width: 992px) {
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\png logo.png" width="150"
+                height="150" alt="Kavya Jewellers" onerror="this.src='https://placehold.co/80x80?text=KAVYA'">
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="bridal.html">Bridal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <a href="wishlist.html" class="nav-icon-wrapper">
+                <i class="far fa-heart"></i>
+                <span id="wishlist-count" class="count-badge">0</span>
+            </a>
+            <a href="cart.html" class="nav-icon-wrapper">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="count-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <h1 class="section-title">Shopping Bag</h1>
+
+        <div id="empty-cart" style="display: none; text-align: center; padding: 50px;">
+            <i class="fas fa-shopping-bag" style="font-size: 4rem; color: #eee; margin-bottom: 20px;"></i>
+            <h2>Your bag is empty</h2>
+            <p style="margin: 20px 0;">Looking for something special?</p>
+            <a href="collections.html" class="btn-primary">Browse Collections</a>
+        </div>
+
+        <div id="cart-content" class="cart-container">
+            <div id="cart-items-list">
+                <!-- Items will be injected here -->
+            </div>
+
+            <div class="summary-box">
+                <h3 style="margin-bottom: 20px;">Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span style="color: green;">FREE</span>
+                </div>
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+                <div class="summary-row" style="font-size: 1.2rem; font-weight: 700;">
+                    <span>Total</span>
+                    <span id="total">₹0</span>
+                </div>
+
+                <div class="checkout-form" style="margin-top: 30px;">
+                    <h4 style="margin-bottom: 15px;">Shipping Details</h4>
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Phone Number">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="Pin Code">
+
+                    <h4 style="margin: 15px 0;">Payment Method</h4>
+                    <select style="width: 100%; padding: 10px; margin-bottom: 20px;">
+                        <option>Cash on Delivery</option>
+                        <option>UPI / Net Banking</option>
+                        <option>Credit / Debit Card</option>
+                    </select>
+
+                    <button class="btn-primary" style="width: 100%;" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+        <footer class="luxury-footer">
+            <!-- Instagram Gallery Strip -->
+            <!-- <div class="footer-insta-strip">
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=2021&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1616150638538-ffb0679a3fc4?q=80&w=1921&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1630030538557-1b71826f2d20?q=80&w=1887&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1573408339305-c84275d49637?q=80&w=1887&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1887&auto=format&fit=crop"
+                        alt="Jewellery">
+                    <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div> -->
+
+            <div class="footer-main">
+                <div class="footer-col footer-brand">
+                    <div class="brand-logo">
+                        <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\png logo.png"
+                            width="120" alt="Kavya Jewellers">
+                    </div>
+                    <h2 class="shimmer-text">KAVYA JEWELLERS</h2>
+                    <p class="tagline">“Timeless Elegance. Crafted with Love.”</p>
+                    <p style="color: var(--soft-gray); font-size: 0.9rem; line-height: 1.6; margin-top: 15px;">
+                        Experience the ultimate in luxury jewellery craftsmanship. From heritage bridal sets to
+                        contemporary diamond masterpieces, we bring your stories to life with gold and precious stones.
+                    </p>
+                    <div class="lux-social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="bridal.html">Bridal Jewellery</a></li>
+                        <li><a href="category.html?type=Gold">Gold Jewellery</a></li>
+                        <li><a href="category.html?type=Diamond">Diamond Jewellery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Customer Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h4>Contact & News</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Jewellery Lane, Heritage Plaza, Mumbai</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fab fa-whatsapp"></i> +91 98765 43211 (WhatsApp Only)</p>
+                        <p><i class="fas fa-envelope"></i> boutique@kavyajewellers.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Sat: 10:00 AM - 8:00 PM</p>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <p>Enter your email for exclusive offers</p>
+                        <form class="lux-newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 Kavya Jewellers. Designed with Luxury by Kavya Jewellers</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-apple-pay"></i>
+                    <i class="fas fa-money-check-alt"></i>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/js/data.js"></script>
+        <script src="assets/js/app.js"></script>
+</body>
+
+</html>

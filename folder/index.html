@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya Jewellers | Timeless Elegance & Exquisite Craftsmanship</title>
+    <meta name="description"
+        content="Discover premium luxury jewellery at Kavya Jewellers. From bridal sets to everyday diamond elegance, we craft pieces for your special moments.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\png logo.png" width="150"
+                height="150" alt="Kavya Jewellers" onerror="this.src='https://placehold.co/80x80?text=KAVYA'">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="bridal.html">Bridal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <a href="wishlist.html" class="nav-icon-wrapper">
+                <i class="far fa-heart"></i>
+                <span id="wishlist-count" class="count-badge">0</span>
+            </a>
+            <a href="cart.html" class="nav-icon-wrapper">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="count-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img class="hero-bg"
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=2574&auto=format&fit=crop"
+            alt="Luxury Jewellery Banner">
+        <h1>Crafted for Your Special Moments</h1>
+        <p>Experience the timeless beauty of hand-crafted jewellery designed to celebrate you.</p>
+        <a href="collections.html" class="btn-primary">Explore Collection</a>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section-padding">
+        <h2 class="section-title">New Arrivals</h2>
+        <div id="static-product-grid" class="product-grid">
+            <!-- Static New Arrivals -->
+            <div class="product-card" data-id="1">
+                <div class="product-image">
+                    <span class="new-tag">New Arrival</span>
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\necklace.jpeg"
+                        alt="Royal Gold Necklace">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Gold</p>
+                    <h3 class="product-name">Royal Gold Necklace</h3>
+                    <p class="product-price">₹85,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(1)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(1)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2">
+                <div class="product-image">
+                    <span class="new-tag">New Arrival</span>
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\ring.jpeg"
+                        alt="Eternal Diamond Ring">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Diamond</p>
+                    <h3 class="product-name">Eternal Diamond Ring</h3>
+                    <p class="product-price">₹45,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(2)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(2)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3">
+                <div class="product-image">
+                    <span class="new-tag">New Arrival</span>
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\choker.webp"
+                        alt="Bridal Choker Set">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Bridal</p>
+                    <h3 class="product-name">Bridal Choker Set</h3>
+                    <p class="product-price">₹1,25,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(3)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(3)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4">
+                <div class="product-image">
+                    <span class="new-tag">New Arrival</span>
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\Antique-Gold-Plated-Bangles-01.jpg"
+                        alt="Antique Gold Bangles">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Antique</p>
+                    <h3 class="product-name">Antique Gold Bangles</h3>
+                    <p class="product-price">₹65,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(4)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(4)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="product-card" data-id="5">
+                <div class="product-image">
+                    <span class="new-tag">New Arrival</span>
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\pendant set.jpg"
+                        alt="Antique Gold Bangles">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Antique</p>
+                    <h3 class="product-name">Pendant Set </h3>
+                    <p class="product-price">₹65,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(5)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(5)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Luxury Quote Section -->
+    <section class="section-padding" style="background: var(--ivory); text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <i class="fas fa-quote-left" style="font-size: 3rem; color: var(--champagne); margin-bottom: 20px;"></i>
+            <h2 style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; line-height: 1.5;">
+                "Jewellery has the power to be the one little thing that makes you feel unique."
+            </h2>
+            <p style="margin-top: 20px; font-weight: 500; letter-spacing: 2px;">— ELIZABETH TAYLOR</p>
+        </div>
+    </section>
+    <footer class="luxury-footer">
+        <!-- Instagram Gallery Strip
+        <div class="footer-insta-strip">
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=2021&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1616150638538-ffb0679a3fc4?q=80&w=1921&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1630030538557-1b71826f2d20?q=80&w=1887&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1573408339305-c84275d49637?q=80&w=1887&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+            <div class="insta-item">
+                <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1887&auto=format&fit=crop" alt="Jewellery">
+                <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+            </div>
+        </div> -->
+
+        <div class="footer-main">
+            <div class="footer-col footer-brand">
+                <div class="brand-logo">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\png logo.png" width="120"
+                        alt="Kavya Jewellers">
+                </div>
+                <h2 class="shimmer-text">KAVYA JEWELLERS</h2>
+                <p class="tagline">“Timeless Elegance. Crafted with Love.”</p>
+                <p style="color: var(--soft-gray); font-size: 0.9rem; line-height: 1.6; margin-top: 15px;">
+                    Experience the ultimate in luxury jewellery craftsmanship. From heritage bridal sets to contemporary
+                    diamond masterpieces, we bring your stories to life with gold and precious stones.
+                </p>
+                <div class="lux-social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="bridal.html">Bridal Jewellery</a></li>
+                    <li><a href="category.html?type=Gold">Gold Jewellery</a></li>
+                    <li><a href="category.html?type=Diamond">Diamond Jewellery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Customer Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-newsletter">
+                <h4>Contact & News</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Jewellery Lane, Heritage Plaza, Mumbai</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fab fa-whatsapp"></i> +91 98765 43211 (WhatsApp Only)</p>
+                    <p><i class="fas fa-envelope"></i> boutique@kavyajewellers.com</p>
+                    <p><i class="fas fa-clock"></i> Mon - Sat: 10:00 AM - 8:00 PM</p>
+                </div>
+                <div style="margin-top: 40px;">
+                    <p>Enter your email for exclusive offers</p>
+                    <form class="lux-newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Kavya Jewellers. Designed with Luxury by Kavya Jewellers</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-google-pay"></i>
+                <i class="fab fa-apple-pay"></i>
+                <i class="fas fa-money-check-alt"></i>
+            </div>
+        </div>
+    </footer>
+    
+   
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

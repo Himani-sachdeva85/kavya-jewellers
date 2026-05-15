@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collections | Kavya Jewellers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\png logo.png" width="150"
+                height="150" alt="Kavya Jewellers" onerror="this.src='https://placehold.co/80x80?text=KAVYA'">
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="collections.html" style="color: var(--primary-gold);">Collections</a>
+            <a href="bridal.html">Bridal</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <a href="wishlist.html" class="nav-icon-wrapper">
+                <i class="far fa-heart"></i>
+                <span id="wishlist-count" class="count-badge">0</span>
+            </a>
+            <a href="cart.html" class="nav-icon-wrapper">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="count-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="section-padding"
+        style="background: #fafafa; text-align: center; padding-top: 100px; padding-bottom: 60px; position: relative; overflow: hidden; color: white;">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2570&auto=format&fit=crop"
+            alt="Collections Banner"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.6);">
+        <div style="position: relative; z-index: 1;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 10px;">The Collections</h1>
+            <p style="color: #eee; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">Browse our
+                complete range of exquisite jewellery</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            <!-- Pendants Set -->
+            <div class="category-card" onclick="window.location.href='category.html?type=Pendant'">
+                <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\pendant set.jpg"
+                    alt="Pendants Set">
+                <div class="category-overlay">
+                    <h3>Pendants Set</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div>
+
+            <!-- Earrings -->
+            <div class="category-card" onclick="window.location.href='category.html?type=Earrings'">
+                <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?q=80&w=600&auto=format&fit=crop"
+                    alt="Earrings">
+                <div class="category-overlay">
+                    <h3>Earrings</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div>
+
+            <!-- Necklaces -->
+            <div class="category-card" onclick="window.location.href='category.html?type=Necklace'">
+                <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\necklace.jpeg"
+                    alt="Necklaces">
+                <div class="category-overlay">
+                    <h3>Necklaces</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div>
+
+            <!-- Rings -->
+            <div class="category-card" onclick="window.location.href='category.html?type=Ring'">
+                <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\ring.jpeg" alt="Rings">
+                <div class="category-overlay">
+                    <h3>Rings</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div>
+
+            <!-- Bangles -->
+            <div class="category-card" onclick="window.location.href='category.html?type=Bangle'">
+                <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\Antique-Gold-Plated-Bangles-01.jpg"
+                    alt="Bangles">
+                <div class="category-overlay">
+                    <h3>Bangles</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div>
+
+            <!-- Chains -->
+            <!-- <div class="category-card" onclick="window.location.href='category.html?type=Chain'">
+                <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=600&auto=format&fit=crop"
+                    alt="Chains">
+                <div class="category-overlay">
+                    <h3>Chains</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div> -->
+
+            <!-- Bracelets -->
+            <!-- <div class="category-card" onclick="window.location.href='category.html?type=Bracelet'">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop"
+                    alt="Bracelets">
+                <div class="category-overlay">
+                    <h3>Bracelets</h3>
+                    <button class="btn-category">View Collection</button>
+                </div>
+            </div> -->
+        </div>
+
+        <h2 class="section-title">All Products</h2>
+        <div id="product-grid" class="product-grid">
+            <!-- Static Collections -->
+            <div class="product-card" data-id="201">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\necklace.jpeg"
+                        alt="Royal Heritage Necklace">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Gold</p>
+                    <h3 class="product-name">Royal Heritage Necklace</h3>
+                    <p class="product-price">₹1,45,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(201)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(201)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="202">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\ring.jpeg"
+                        alt="Divine Diamond Ring">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Diamond</p>
+                    <h3 class="product-name">Divine Diamond Ring</h3>
+                    <p class="product-price">₹62,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(202)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(202)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="203">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\pendant set.jpg"
+                        alt="Majestic Pendant Set">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Antique</p>
+                    <h3 class="product-name">Majestic Pendant Set</h3>
+                    <p class="product-price">₹89,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(203)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(203)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="204">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\Antique-Gold-Plated-Bangles-01.jpg"
+                        alt="Traditional Gold Bangles">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Gold</p>
+                    <h3 class="product-name">Traditional Gold Bangles</h3>
+                    <p class="product-price">₹95,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(204)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(204)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="205">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?q=80&w=600&auto=format&fit=crop"
+                        alt="Eternal Pearl Earrings">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Silver</p>
+                    <h3 class="product-name">Eternal Pearl Earrings</h3>
+                    <p class="product-price">₹12,500</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(205)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(205)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="206">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?q=80&w=600&auto=format&fit=crop"
+                        alt="Lustrous Gold Chain">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Gold</p>
+                    <h3 class="product-name">Lustrous Gold Chain</h3>
+                    <p class="product-price">₹55,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(206)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(206)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="207">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=600&auto=format&fit=crop"
+                        alt="Diamond Tennis Bracelet">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Diamond</p>
+                    <h3 class="product-name">Diamond Tennis Bracelet</h3>
+                    <p class="product-price">₹2,10,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(207)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(207)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="208">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\choker.webp"
+                        alt="Royal Bridal Choker">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Bridal</p>
+                    <h3 class="product-name">Royal Bridal Choker</h3>
+                    <p class="product-price">₹3,50,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(208)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(208)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="209">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=600&auto=format&fit=crop"
+                        alt="Eternal Diamond Nose Pin">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Diamond</p>
+                    <h3 class="product-name">Eternal Diamond Nose Pin</h3>
+                    <p class="product-price">₹8,500</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(209)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(209)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="210">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop"
+                        alt="Traditional Maang Tikka">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Gold</p>
+                    <h3 class="product-name">Traditional Maang Tikka</h3>
+                    <p class="product-price">₹42,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(210)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(210)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="211">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1535633302704-5043dd58576e?q=80&w=600&auto=format&fit=crop"
+                        alt="Silver Anklets Pair">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Silver</p>
+                    <h3 class="product-name">Silver Anklets Pair</h3>
+                    <p class="product-price">₹5,500</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(211)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(211)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="212">
+                <div class="product-image">
+                    <img src="c:\Users\HI-TECH\website\kavya-jewellers\Branding kavya jweller\images\necklace.jpeg"
+                        alt="Antique Gold Necklace">
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Antique</p>
+                    <h3 class="product-name">Antique Gold Necklace</h3>
+                    <p class="product-price">₹92,000</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-add-cart" onclick="addToCart(212)">Add to Cart</button>
+                    <button class="btn-wishlist" onclick="toggleWishlist(212)">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic products will be appended here -->
+
+        </div>
+
+        <div class="footer-col">
+            <h4>Customer Services</h4>
+            <ul class="footer-links">
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+            <h4>Contact & News</h4>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Jewellery Lane, Heritage Plaza, Mumbai</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fab fa-whatsapp"></i> +91 98765 43211 (WhatsApp Only)</p>
+                <p><i class="fas fa-envelope"></i> boutique@kavyajewellers.com</p>
+                <p><i class="fas fa-clock"></i> Mon - Sat: 10:00 AM - 8:00 PM</p>
+            </div>
+            <div style="margin-top: 40px;">
+                <p>Enter your email for exclusive offers</p>
+                <form class="lux-newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+        <script src="assets/js/data.js"></script>
+        <script src="assets/js/app.js"></script>
+</body>
+
+</html>
